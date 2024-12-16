@@ -136,7 +136,21 @@
                     <span class="flex-1 ms-3 whitespace-nowrap">Transaksi</span>
                 </a>
             </li>
+            @if (Auth::user()->role == 1)
+                <li>
+                    <a href="/backup"
+                        class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-secondary dark:hover:bg-gray-700 group">
 
+                        <svg class="flex-shrink-0 w-5 h-5 text-white transition duration-75 group-hover:text-white dark:text-gray-400 dark:group-hover:text-white"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M9.25 1.75a3.75 3.75 0 0 0-3.75 3.75v.75h-1a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-1v-.75a3.75 3.75 0 0 0-3.75-3.75h-1.5zM7 5.5a2.25 2.25 0 0 1 2.25-2.25h1.5a2.25 2.25 0 0 1 2.25 2.25v.75H7v-.75zm5 4.75a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h2.5a.75.75 0 0 1 .75.75z" />
+                        </svg>
+                        <span class="flex-1 ms-3 whitespace-nowrap">Backup</span>
+                    </a>
+                </li>
+            @endif
         </ul>
     </div>
 </aside>
